@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title>Example</title>
+	</head>
+	<body>
+		<h1>Hi Welcome in home again</h1>
+		<hr/>
+		{% if myVar == 'Red' %}
+		<h1> Variable Red: {{myVar}}</h1>
+		{% else %}
+		<h1>Variable not Red</h1>
+		{% endif %}
+		
+		Test of loops
+		{% for link in links %}
+		<a href="{{link}}">Links</a>
+		{% endfor %}
+		</body>
+		<script type="text/javascript">
+			document.bgColor = '{{myVar}}';
+		</script>
+</html>

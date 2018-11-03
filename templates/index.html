@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Guest Book</title>
+	<link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<div class="well">
+			<h1>Guest Book</h1>
+			<a type="button" class="btn btn-link" href="{{ url_for('sign') }}">Sign the Guest Book</a>
+		</div>
+		{% for r in result %}
+		<div>
+			<h3>{{ r.name }}</h3>
+		</div>
+		<div class="well">
+			<p>{{ r.comment }}</p>
+		</div>
+		{% endfor %}
+	</div>
+</body>
+</html>
